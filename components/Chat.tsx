@@ -25,7 +25,7 @@ export const Chat = ({ roomId, roomname }: { roomId: string | string[] | undefin
     const [loading,setloading] = useState(false)
     const [msgloading,setmsgloading] = useState(true)
     useEffect(() => {
-        const ws = new WebSocket("ws://localhost:8080");
+        const ws = new WebSocket(process.env.WEB || "ws://localhost:8080");
         socketRef.current = ws;
         ws.onopen = () => console.log("WebSocket Connected ✅");
         // ws.onmessage = (event) => {

@@ -28,7 +28,7 @@ export const Message = ({doubtid, userid, name, title, description, createdat, u
 
   useEffect(()=>{
     try {
-      const ws = new WebSocket("http://localhost:8080");
+      const ws = new WebSocket(process.env.WEB || "ws://localhost:8080");
       socketref.current = ws;
       ws.onopen = ()=>console.log("websocket connected")
       ws.onmessage = (event)=>{
