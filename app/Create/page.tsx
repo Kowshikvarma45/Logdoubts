@@ -6,8 +6,10 @@ import { useRouter } from "next/navigation";
 import { ClipboardCopy, ArrowRight } from "lucide-react";
 import { Alert } from "../../components/Alert";
 import { motion } from "framer-motion";
+import { useSession } from "next-auth/react";
 
 export default function RoomPage() {
+    const session = useSession();
     const [roomid, setRoomid] = useState("");
     const [roomname, setRoomname] = useState("");
     const [copied, setCopied] = useState(false);
@@ -15,6 +17,10 @@ export default function RoomPage() {
     const [created, setCreated] = useState(false);
     const [alertMsg, setAlertMsg] = useState<string | null>(null);
     const router = useRouter();
+
+    if(session.data?.user) {
+        router.push("../Account")
+    }
 
     function showAlert(msg: string) {
         setAlertMsg(msg);
