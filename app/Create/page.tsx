@@ -18,7 +18,7 @@ export default function RoomPage() {
     const [alertMsg, setAlertMsg] = useState<string | null>(null);
     const router = useRouter();
 
-    if(session.data?.user) {
+    if(!session.data?.user) {
         router.push("../Account")
     }
 
