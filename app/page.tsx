@@ -29,7 +29,7 @@ export default function Home() {
           className="mt-2 flex justify-center text-xl"
         />
       </header>
-      <div className="flex justify-center mt-10 hover:scale-105">
+      <div className="flex justify-center mx-10 hover:scale-105">
       <SpotlightCard className="w-100 p-10 py-15 text-center" spotlightColor="rgba(0, 229, 255, 0.2)">
         <h2 className="text-2xl font-bold mb-4 text-white">Get Started</h2>
         <div className="w-[200px] h-[200px] ml-4 bg-cover bg-center bg-no-repeat"style={{ backgroundImage: "url('/jumbopng.png')" }}>
@@ -54,7 +54,7 @@ export default function Home() {
       </SpotlightCard>
       </div>
     </div>
-      <footer className="mt-3 bg-black py-6 text-center">
+      <footer className="bg-black py-6 text-center">
         <div className="text-white">
           Made with <span className="animate-pulse">❤️</span> by kowshik varma kucharallapati!
         </div>
