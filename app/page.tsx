@@ -54,7 +54,7 @@ export default function Home() {
       </SpotlightCard>
       </div>
     </div>
-      <footer className="bg-black py-6 text-center">
+      <footer className="mt-3 bg-black py-6 text-center">
         <div className="text-white">
           Made with <span className="animate-pulse">❤️</span> by kowshik varma kucharallapati!
         </div>
